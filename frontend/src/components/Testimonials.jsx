@@ -1,22 +1,23 @@
-import React from 'react';
-
 const testimonials = [
-  { quote: 'SoftSell helped us sell unused licenses with ease. Very professional team!', name: 'Alice Johnson', role: 'CTO', company: 'Techify' },
-  { quote: 'Excellent service and super fast payment. Highly recommend.', name: 'Mark Lee', role: 'Operations Head', company: 'ByteWorks' }
-];
+  { name: 'Jane Doe', role: 'IT Manager', company: 'TechBridge Inc.', quote: 'SoftSell helped us quickly monetize unused software — super smooth experience!' },
+  { name: 'John Smith', role: 'Operations Lead', company: 'CloudNova', quote: 'Fast, reliable, and excellent customer support. Highly recommended!' },
+]
 
-export default function Testimonials() {
+const Testimonials = () => {
   return (
-    <section className="bg-indigo-50 py-20 px-6">
-      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-10">Customer Testimonials</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {testimonials.map((t, index) => (
-          <div key={index} className="bg-white p-6 rounded-xl shadow">
-            <p className="mb-4 italic">"{t.quote}"</p>
-            <p className="font-semibold">{t.name}, {t.role} - {t.company}</p>
+    <section className="py-16 px-6 bg-blue-50 text-center">
+      <h2 className="text-3xl font-bold mb-10">Customer Testimonials</h2>
+      <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-2">
+        {testimonials.map((t, i) => (
+          <div key={i} className="bg-white p-6 rounded-xl shadow">
+            <p className="italic mb-4">“{t.quote}”</p>
+            <p className="font-semibold">{t.name}</p>
+            <p className="text-sm text-gray-500">{t.role}, {t.company}</p>
           </div>
         ))}
       </div>
     </section>
-  );
+  )
 }
+
+export default Testimonials

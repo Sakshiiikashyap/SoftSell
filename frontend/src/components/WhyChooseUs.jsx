@@ -1,25 +1,27 @@
-import React from 'react';
+import { ShieldCheck, Clock, Smile, DollarSign } from 'lucide-react'
 
-const benefits = [
-  { icon: '🔐', title: 'Trusted & Secure', desc: 'Top-grade encryption and verified transactions.' },
-  { icon: '⚡', title: 'Fast Turnaround', desc: 'Speedy process from quote to payout.' },
-  { icon: '💰', title: 'Best Prices', desc: 'Get the highest value for your licenses.' },
-  { icon: '🙋‍♂️', title: 'Support Anytime', desc: 'We’re here 24/7 to help you.' }
-];
+const features = [
+  { icon: <ShieldCheck />, title: 'Secure Transactions', desc: 'Your data and deals are fully protected.' },
+  { icon: <Clock />, title: 'Quick Processing', desc: 'Get your payment processed in under 24 hours.' },
+  { icon: <Smile />, title: 'Trusted by Users', desc: 'Rated 4.9/5 by thousands of happy sellers.' },
+  { icon: <DollarSign />, title: 'Best Value', desc: 'We offer the highest returns for your software licenses.' },
+]
 
-export default function WhyChooseUs() {
+const WhyChooseUs = () => {
   return (
-    <section className="py-20 px-6">
-      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-10">Why Choose SoftSell?</h2>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-        {benefits.map((item, index) => (
-          <div key={index} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <div className="text-4xl mb-2">{item.icon}</div>
-            <h4 className="font-bold mb-1">{item.title}</h4>
-            <p className="text-sm">{item.desc}</p>
+    <section className="py-16 px-6 text-center">
+      <h2 className="text-3xl font-bold mb-10">Why Choose Us</h2>
+      <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {features.map((item, idx) => (
+          <div key={idx} className="bg-gray-100 p-6 rounded-xl shadow">
+            <div className="text-blue-600 mb-4 flex justify-center">{item.icon}</div>
+            <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+            <p>{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
-  );
+  )
 }
+
+export default WhyChooseUs
