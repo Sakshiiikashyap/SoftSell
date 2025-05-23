@@ -1,16 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="SoftSell - Easily sell your unused software licenses and get paid fast." />
-    <meta name="keywords" content="SoftSell, Sell Software Licenses, Unused Licenses, Software Resale" />
-    <meta name="author" content="SoftSell Team" />
-    <title>SoftSell - Sell Your Unused Software Licenses</title>
-    <link rel="icon" href="/favicon.ico" />
-  </head>
-  <body class="bg-white text-gray-800 font-sans">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sell unused software licenses with SoftSell" />
+  <title>SoftSell | Sell Unused Licenses</title>
+  <link rel="icon" href="/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  <!-- Hero Section -->
+  <section class="bg-indigo-600 text-white py-24 text-center shadow-lg rounded-b-3xl">
+    <h1 class="text-5xl font-extrabold mb-4">Turn Unused Licenses into Profit</h1>
+    <p class="text-xl mb-6">SoftSell lets you securely and quickly sell your software licenses.</p>
+    <button class="bg-white text-indigo-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-200 transition">Sell My Licenses</button>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-10 text-indigo-600">How It Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+        <div class="text-5xl mb-4">📤</div>
+        <h3 class="text-xl font-semibold mb-2">Upload License</h3>
+        <p>Provide your software license details.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+        <div class="text-5xl mb-4">💼</div>
+        <h3 class="text-xl font-semibold mb-2">Get Valuation</h3>
+        <p>Receive a fair and fast market quote.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+        <div class="text-5xl mb-4">💸</div>
+        <h3 class="text-xl font-semibold mb-2">Get Paid</h3>
+        <p>Transfer the license and receive payment instantly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center text-indigo-600 mb-10">Why Choose SoftSell?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-4xl mb-2">🔐</div>
+        <h4 class="font-bold mb-1">Trusted & Secure</h4>
+        <p class="text-sm">Top-grade encryption and verified transactions.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-4xl mb-2">⚡</div>
+        <h4 class="font-bold mb-1">Fast Turnaround</h4>
+        <p class="text-sm">Speedy process from quote to payout.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-4xl mb-2">💰</div>
+        <h4 class="font-bold mb-1">Best Prices</h4>
+        <p class="text-sm">Get the highest value for your licenses.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-4xl mb-2">🙋‍♂️</div>
+        <h4 class="font-bold mb-1">Support Anytime</h4>
+        <p class="text-sm">We’re here 24/7 to help you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-indigo-50 py-20 px-6">
+    <h2 class="text-3xl font-bold text-center text-indigo-600 mb-10">Customer Testimonials</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="mb-4 italic">"SoftSell helped us sell unused licenses with ease. Very professional team!"</p>
+        <p class="font-semibold">Alice Johnson, CTO - Techify</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="mb-4 italic">"Excellent service and super fast payment. Highly recommend."</p>
+        <p class="font-semibold">Mark Lee, Operations Head - ByteWorks</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center text-indigo-600 mb-10">Contact Us</h2>
+    <form class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow space-y-4">
+      <input type="text" placeholder="Name" required class="w-full border p-3 rounded" />
+      <input type="email" placeholder="Email" required class="w-full border p-3 rounded" />
+      <input type="text" placeholder="Company" required class="w-full border p-3 rounded" />
+      <select required class="w-full border p-3 rounded">
+        <option value="">Select License Type</option>
+        <option>Microsoft Office</option>
+        <option>Adobe Suite</option>
+        <option>Antivirus</option>
+        <option>Other</option>
+      </select>
+      <textarea placeholder="Your Message" rows="4" class="w-full border p-3 rounded" required></textarea>
+      <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded hover:bg-indigo-700">Submit</button>
+    </form>
+  </section>
+
+  <div id="root"></div>
+  <script type="module" src="/src/app.jsx"></script>
+
+</body>
 </html>
+
